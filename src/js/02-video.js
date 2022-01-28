@@ -4,7 +4,7 @@ import throttle from 'lodash.throttle';
 const iframe = document.querySelector('iframe#vimeo-player');
 const player = new Vimeo.Player(iframe);
 const LOCALSTORAGE_KEY = "videoplayer-current-time";
-const currentTime = localStorage.getItem(LOCALSTORAGE_KEY);
+let currentTime = localStorage.getItem(LOCALSTORAGE_KEY);
 
 function getCurrentVideo(data) {
     let timeInSeconds = data.seconds;
