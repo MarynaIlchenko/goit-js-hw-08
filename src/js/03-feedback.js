@@ -26,12 +26,12 @@ function formSubmit(event) {
 }
 
 function populateForm() {
-    const savedData = JSON.parse(localStorage.getItem(STORAGE_KEY))
+    const savedInfo = JSON.parse(localStorage.getItem(STORAGE_KEY))
    
-    for (const key in savedData) {
+    for (const key in savedInfo) {
         if (key) {
-            formRef[key].value = savedData[key];
-            items = savedData;
+            formRef[key].value = savedInfo[key];
+            items = savedInfo;
         } 
     }
 }
